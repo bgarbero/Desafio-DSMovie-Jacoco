@@ -41,9 +41,9 @@ import com.devsuperior.dsmovie.services.exceptions.ResourceNotFoundException;
 <span class="fc" id="L41">		score = scoreRepository.saveAndFlush(score);</span>
 		
 <span class="fc" id="L43">		double sum = 0.0;</span>
-<span class="pc bpc" id="L44" title="1 of 2 branches missed.">		for (ScoreEntity s : movie.getScores()) {</span>
-<span class="nc" id="L45">			sum = sum + s.getValue();</span>
-<span class="nc" id="L46">		}</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">		for (ScoreEntity s : movie.getScores()) {</span>
+<span class="fc" id="L45">			sum = sum + s.getValue();</span>
+<span class="fc" id="L46">		}</span>
 			
 <span class="fc" id="L48">		double avg = sum / movie.getScores().size();</span>
 		

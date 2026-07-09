@@ -57,6 +57,7 @@ public class ScoreServiceTests {
 		scoreDTO = ScoreFactory.createScoreDTO();
 
 		movie = MovieFactory.createMovieEntity();
+		movie.getScores().add(score);
 
 		movieDTO = MovieFactory.createMovieDTO();
 
@@ -82,6 +83,7 @@ public class ScoreServiceTests {
 		Assertions.assertNotNull(result);
 		Assertions.assertEquals(result.getId(), movieDTO.getId());
 		Assertions.assertEquals(movieDTO.getTitle(), result.getTitle());
+		Assertions.assertEquals(4.5, result.getScore());
 	}
 	
 	@Test
